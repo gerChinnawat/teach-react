@@ -20,7 +20,7 @@ function App() {
       id: list.length + 1,
       title: inputValue,
     }]);
-    setInputValue("");
+    setInputValue(""); 
   };
 
   return (
