@@ -12,7 +12,7 @@ function App() {
     setTimeout(() => {
       setIsLoading(false);
     }, 1000)
-  }, [])
+  }, []);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -21,7 +21,7 @@ function App() {
       title: inputValue,
     }]);
     setInputValue("");
-  }
+  };
 
   return (
     <>
