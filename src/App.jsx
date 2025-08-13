@@ -8,7 +8,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    console.log("useEffect render")
+    console.log("useEffect render");
     setTimeout(() => {
       setIsLoading(false);
     }, 1000)
@@ -30,6 +30,7 @@ function App() {
       : <div>
           <h1>React Hooks!</h1>
           <input
+            required
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
