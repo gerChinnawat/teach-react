@@ -5,7 +5,7 @@ const Counter = () => {
     console.log("Counter render");
 
     const countClick = () => {
-    setCount(count + 1)
+        setCount(count + 1)
     };
 
     return (<>
