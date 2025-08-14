@@ -8,7 +8,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={base} element={<UseStatePage />}>
+        <Route path={base} element={<UseStatePage />} />
+        <Route path={base}>
           <Route path="use_state" element={<UseStatePage />} />
           <Route path="use_effect" element={<UseEffectPage />} />
         </Route>
