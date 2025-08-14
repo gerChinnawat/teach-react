@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router";
-import Layout from "./components/Layout";
 import UseStatePage from "./pages/UseStatePage";
 import UseEffectPage from "./pages/UseEffectPage";
 
