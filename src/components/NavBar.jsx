@@ -11,6 +11,7 @@ const NavBar = () => {
         <ul>
             <li><Link to={`${base + "/use_state"}`}>useState</Link></li>
             <li><Link to={`${base + "/use_effect"}`}>useEffect</Link></li>
+            <li><Link to={`${base + "/use_ref"}`}>useRef</Link></li>
             <li>useMemo</li>
             <li>useCallback</li>
         </ul>
