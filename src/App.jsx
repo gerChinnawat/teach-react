@@ -4,14 +4,15 @@ import UseStatePage from "./pages/UseStatePage";
 import UseEffectPage from "./pages/UseEffectPage";
 
 function App() {
-  const base = "/teach-react"
+  const base = "/teach-react/"
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route index path={base} element={<UseStatePage />} />
-        <Route path={`${base}/use_state`} element={<UseStatePage />} />
-        <Route path={`${base}/use_effect`} element={<UseEffectPage />} />
+        <Route path={base} element={<UseStatePage />}>
+          <Route path="use_state" element={<UseStatePage />} />
+          <Route path="use_effect" element={<UseEffectPage />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )
