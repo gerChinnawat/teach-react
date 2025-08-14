@@ -1,48 +1,20 @@
-import { useState, useEffect } from "react"
-import ToDoList from "./components/ToDoList";
-import Counter from "./components/Counter";
+import { BrowserRouter, Routes, Route } from "react-router";
+import Layout from "./components/Layout";
+import UseStatePage from "./pages/UseStatePage";
+import UseEffectPage from "./pages/UseEffectPage";
 
 function App() {
-  const [list, setList] = useState([]);
-  const [inputValue, setInputValue] = useState("");
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    console.log("useEffect render");
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000)
-  }, []);
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-    setList(preValue => [...preValue, {
-      id: list.length + 1,
-      title: inputValue,
-    }]);
-    setInputValue(""); 
-  };
+  const base = "/teach-react"
 
   return (
-    <>
-    {isLoading
-      ? <h1>Loading ...</h1>
-      : <div>
-          <h1>React Hooks!</h1>
-          <input
-            required
-            type="text"
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-          />
-          <button onClick={onSubmit}>Add List</button>
-          <ToDoList list={list} />
-          <hr/>
-          <Counter />
-      </div>
-    }
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path={base} element={<UseStatePage />} />
+        <Route path={`${base}/use_state`} element={<UseStatePage />} />
+        <Route path={`${base}/use_effect`} element={<UseEffectPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
-export default App
+export default App;
