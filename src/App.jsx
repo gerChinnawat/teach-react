@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={base} element={<UseStatePage />} />
+        <Route index path={base} element={<UseStatePage />} />
         <Route path={`${base}/use_state`} element={<UseStatePage />} />
         <Route path={`${base}/use_effect`} element={<UseEffectPage />} />
       </Routes>

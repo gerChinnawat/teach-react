@@ -1,5 +1,5 @@
 import "../styles/navbar.css"
-import { NavLink } from "react-router";
+import { Link } from "react-router";
 
 const NavBar = () => {
     const base = "/teach-react"
@@ -8,8 +8,8 @@ const NavBar = () => {
     <nav>
         <h3>React Hooks</h3>
         <ul>
-            <li><NavLink to={`${base + "/use_state"}`}>useState</NavLink></li>
-            <li><NavLink to={`${base + "/use_effect"}`}>useEffect</NavLink></li>
+            <li><Link to={`${base + "/use_state"}`}>useState</Link></li>
+            <li><Link to={`${base + "/use_effect"}`}>useEffect</Link></li>
             <li>useMemo</li>
             <li>useCallback</li>
         </ul>
